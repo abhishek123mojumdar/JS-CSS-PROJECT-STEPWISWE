@@ -30,8 +30,6 @@ function update() {
   let activeElements = document.querySelectorAll('.active');
   progressBar.style.width =
     ((activeElements.length - 1) / (circles.length - 1)) * 100 + '%';
-  console.log(progressBar.style.width);
-
   if (counter === 1) {
     prevBtn.setAttribute('disabled', true);
     prevBtn.classList.add('disabled');
