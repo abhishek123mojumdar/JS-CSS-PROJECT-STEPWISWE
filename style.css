@@ -1,3 +1,85 @@
-h1, h2 {
-  font-family: Lato;
+h1,
+h2,
+p {
+  font-family: monospace;
+  color: rgb(0, 4, 255);
+}
+
+body {
+  margin: 0;
+  height: 100vh;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+.stepWiseContainer {
+  margin: 1rem;
+  display: flex;
+  width: 80vw;
+  justify-content: space-between;
+  position: relative;
+}
+
+.stepWiseContainer::before {
+  content: '';
+  position: absolute;
+  width: 100%;
+  height: 0.1rem;
+  background-color: rgb(150, 140, 140);
+  top: 50%;
+  z-index: -1;
+}
+
+.circle {
+  width: 30px;
+  height: 30px;
+  border: 1px solid rgb(150, 140, 140);
+  border-radius: 40px;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  transition: all 0.4s ease;
+  background-color: rgb(226, 226, 226);
+}
+
+.circle.active {
+  border-color: aqua;
+  background-color: aquamarine;
+  color: rgb(8, 52, 173);
+  font-weight: 800;
+  border-radius: 10px;
+}
+
+.progressbar {
+  position: absolute;
+  width: 0%;
+  height: 0.1rem;
+  background-color: aquamarine;
+  top: 50%;
+  z-index: -1;
+  transition: all 0.4s ease;
+}
+
+.btn {
+  width: 6rem;
+  margin: 0.4rem;
+  border-radius: 5px;
+  border-color: aqua;
+  background-color: aquamarine;
+  transition: all 0.4s ease;
+  cursor: pointer;
+}
+
+.btn:hover {
+  transform: scale(1.1);
+}
+
+.btn.disabled {
+  border-color: rgb(107, 109, 109);
+  background-color: rgb(127, 129, 129);
+  color: aliceblue;
+  transform: scale(0.9);
+  cursor: not-allowed;
 }
