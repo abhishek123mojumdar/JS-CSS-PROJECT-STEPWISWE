@@ -10,6 +10,8 @@ In this project I have tried to inclued the concepts that I covered in the previ
 
 Please check the the comments ; you can add you comments in case you have any inputs about the same
 
+We have also used the basic concepts of CSS and JS and created a five star rating System
+
 This step wize wizard can be used to create a stepwise form
 
 [Edit on StackBlitz ⚡️](https://stackblitz.com/edit/js-6trfzv)

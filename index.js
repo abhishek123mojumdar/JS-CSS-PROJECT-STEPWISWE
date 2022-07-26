@@ -6,6 +6,9 @@ let nextBtn = document.getElementById('next');
 let prevBtn = document.getElementById('prev');
 let progressBar = document.querySelector('.progressbar');
 let circles = document.querySelectorAll('.circle');
+let stars = document.querySelectorAll('a');
+let showRating = document.getElementById('showRating');
+let ratingCounter = 0;
 
 nextBtn.addEventListener('click', next);
 prevBtn.addEventListener('click', prev);
@@ -53,4 +56,23 @@ function updateNextPrev() {
       ? nextBtn.removeAttribute('disabled', '')
       : '';
   }
+}
+
+stars.forEach((star, index) => {
+  star.addEventListener('click', function (e) {
+    updateClass(index);
+  });
+});
+
+function updateClass(count) {
+  stars.forEach((star1, index) => {
+    if (index <= count && !star1.classList.contains('active')) {
+      star1.classList.add('active');
+      ratingCounter = ratingCounter + 1;
+    } else if (index >= count && star1.classList.contains('active')) {
+      star1.classList.remove('active');
+      ratingCounter = ratingCounter - 1;
+    }
+    showRating.innerHTML = 'The rating is : ' + ratingCounter;
+  });
 }
