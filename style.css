@@ -142,6 +142,7 @@ a.active {
   background-color: rgba(0, 0, 0, 0.5);
   visibility: hidden;
   opacity: 0;
+  transition: all 0.4s ease-in;
 }
 
 .modal {
@@ -152,7 +153,14 @@ a.active {
   background-color: white;
   width: 50rem;
   max-width: 50rem;
+  transform: translateY(50%);
+  opacity: 1;
   transition: all 0.4s ease-in;
+}
+
+.modal.active {
+  transform: translateY(0);
+  opacity: 1;
 }
 
 .modal-pop-up.active {

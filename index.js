@@ -9,7 +9,8 @@ let circles = document.querySelectorAll('.circle');
 let stars = document.querySelectorAll('a');
 let showRating = document.getElementById('showRating');
 let popUpModalBtn = document.getElementById('popUpModalBtn');
-let modal = document.getElementsByClassName('modal-pop-up')[0];
+let modalBg = document.getElementsByClassName('modal-pop-up')[0];
+let modal = document.getElementsByClassName('modal')[0];
 let ratingCounter = 0;
 
 nextBtn.addEventListener('click', next);
@@ -82,9 +83,11 @@ function updateClass(count) {
 
 function callModal() {
   //console.log(modal);
+  modalBg.classList.add('active');
   modal.classList.add('active');
 }
 
 document.getElementById('closeModal').addEventListener('click', () => {
   modal.classList.remove('active');
+  modalBg.classList.remove('active');
 });
