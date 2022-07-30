@@ -14,4 +14,8 @@ We have also used the basic concepts of CSS and JS and created a five star ratin
 
 This step wize wizard can be used to create a stepwise form
 
+We have created a 5 star widget
+
+We have also created a modal pop up purely using HTML , CSS, JS
+
 [Edit on StackBlitz ⚡️](https://stackblitz.com/edit/js-6trfzv)
