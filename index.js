@@ -8,10 +8,13 @@ let progressBar = document.querySelector('.progressbar');
 let circles = document.querySelectorAll('.circle');
 let stars = document.querySelectorAll('a');
 let showRating = document.getElementById('showRating');
+let popUpModalBtn = document.getElementById('popUpModalBtn');
+let modal = document.getElementsByClassName('modal-pop-up')[0];
 let ratingCounter = 0;
 
 nextBtn.addEventListener('click', next);
 prevBtn.addEventListener('click', prev);
+popUpModalBtn.addEventListener('click', callModal);
 
 function next() {
   counter++;
@@ -76,3 +79,12 @@ function updateClass(count) {
     showRating.innerHTML = 'The rating is : ' + ratingCounter;
   });
 }
+
+function callModal() {
+  //console.log(modal);
+  modal.classList.add('active');
+}
+
+document.getElementById('closeModal').addEventListener('click', () => {
+  modal.classList.remove('active');
+});
